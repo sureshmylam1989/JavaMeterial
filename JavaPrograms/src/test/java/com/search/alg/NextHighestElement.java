@@ -12,9 +12,15 @@ public class NextHighestElement {
 		}
 	}
 
+	// replace each element with next highest element if any else leave the element
 	public static void nextHighest(int[] a) {
+		
+		// Stack ---> push if element is > than top else pop
 		Stack<Integer> st = new Stack<Integer>();
+
+		// This to keep track of index of the element to replace
 		Stack<Integer> index = new Stack<Integer>();
+
 		int counter = 0;
 		for (int i = 0; i < a.length;) {
 			if (!st.empty() && a[i] > st.peek()) {
